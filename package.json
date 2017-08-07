@@ -12,20 +12,43 @@
   },
   "devDependencies": {
     "cucumber": "^2.3.1",
+    "cucumber-mink": "^1.6.0",
     "eslint": "^4.4.0",
     "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.1.0",
+    "eslint-plugin-standard": "^3.0.1",
     "mocha": "^3.5.0",
     "node-sass": "^4.5.3",
     "react-scripts": "1.0.10",
-    "sass-loader": "^6.0.6"
+    "sass-loader": "^6.0.6",
+    "webdriverio": "^4.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akinsbo/playout.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akinsbo/playout/issues"
+  },
+  "homepage": "https://github.com/akinsbo/playout#readme"
 }
