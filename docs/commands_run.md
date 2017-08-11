@@ -1,22 +1,31 @@
 Install NPM dependencies
 ========================
 
-```cli
-$ npm install --save-dev cucumber eslint eslint@^3.19.0 eslint@>=4.1.1 eslint-plugin-react mocha sass-loader node-sass cucumber-mink webdriverio
+#### Testing
 
+```cli
+$ npm install --save-dev cucumber eslint eslint@^3.19.0 eslint@>=4.1.1 eslint-plugin-react mocha sass-loader node-sass cucumber-mink webdriverio wdio-cucumber-framework --save-dev
 $ npm install --save material-ui redux react-redux react-tap-event-plugin
 ----------------------------------------------------------------------
 $ npm install selenium-standalone@latest -g
 $ selenium-standalone install
 $ selenium-standalone start
 ```
-------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Install watchman to carter for FS_EVENT error when npm test is run
+
+```cli
+brew install watchman
+```
+then sudo npm test
+--------------------------------------------------------------------------------
 
 run this:
 ```cli
 ./node_modules/.bin/eslint --init
 ./node_modules/.bin/eslint yourfile.js
 ```
+
 
 --------------------------------------------------------------------------------
 At start of App.js, inject this
