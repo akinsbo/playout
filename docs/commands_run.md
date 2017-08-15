@@ -53,3 +53,15 @@ At .eslintrc.json, I added the following configuration
   ]
 }
 ```
+--------------------------------------------------------------
+At wdio.conf.js, add the following:
+```js
+// wdio.conf.js
+export.config = {
+  // ...
+  reporters: ['dot', 'spec'], //after installing wdio-spec-reporter
+  services: ['selenium-standalone'], //after installing wdio-selenium-standalone-service
+  services: ['phantomjs'], //after installing wdio-phantomjs-service
+  // ...
+};
+```

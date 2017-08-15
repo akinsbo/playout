@@ -28,14 +28,14 @@
     "react-scripts": "1.0.10",
     "sass-loader": "^6.0.6",
     "wdio-cucumber-framework": "^0.3.1",
+    "wdio-spec-reporter": "^0.1.0",
     "webdriverio": "^4.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "clean": "read -p \"Are you sure you want to clean the project? [y/n] \" REPLY; if [[ $REPLY =~ ^[Yy]$ ]]; then rm -R .git .github demo-app test .travis.yml jest.json wdio.BUILD.conf.js src/features/**; fi",
+    "eject": "react-scripts eject"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
@@ -47,7 +47,7 @@
     "url": "git+https://github.com/akinsbo/playout.git"
   },
   "keywords": [
-    "vanilla reactjs app"
+    "vanilla reactjs app",
     "reactjs",
     "react setup"
   ],

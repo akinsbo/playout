@@ -35,6 +35,7 @@ one-time-setup-for_all_projects:
 	./node_modules/.bin/cucumber-mink features/entity/entity.feature -- -f pretty"
 
 one-time-setup-for_this_project:
+	@echo "npm install does this but this shows a stepwise line-grouped install"
 	@echo "Setup one-time for this project"
 	@echo "==================="
 	@echo "Setup dev dependencies"
@@ -44,6 +45,7 @@ one-time-setup-for_this_project:
 	mocha \
 	sass-loader node-sass \
 	cucumber cucumber-mink webdriverio wdio-cucumber-framework \
+	wdio-spec-reporter wdio-phantomjs-service wdio-selenium-standalone-service \
 	@echo "Setup dependencies"
 	@echo "==================="
 	npm install --save \
@@ -56,6 +58,10 @@ one-time-setup-for_this_project:
 	./node_modules/.bin/eslint --init
 	@echo "Run fix-run for eslint fix"
 	@echo "For a single file, use ./node_modules/.bin/eslint yourfile.js --fix"
+	@echo "setup webdriverio"
+	@echo "chose cucumber when asked for framework to allow BDD"
+	./node_modules/.bin/wdio config
+
 
 test-run:
 	@echo "Running cucumber-mink"
