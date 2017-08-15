@@ -34,7 +34,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean": "read -p \"Are you sure you want to clean the project? [y/n] \" REPLY; if [[ $REPLY =~ ^[Yy]$ ]]; then rm -R .git .github demo-app test .travis.yml jest.json wdio.BUILD.conf.js src/features/**; fi",
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
@@ -45,8 +46,12 @@
     "type": "git",
     "url": "git+https://github.com/akinsbo/playout.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "vanilla reactjs app"
+    "reactjs",
+    "react setup"
+  ],
+  "author": "Olaolu Akinsete",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/akinsbo/playout/issues"

@@ -2,7 +2,7 @@ Install NPM dependencies
 ========================
 #### Testing
 
-```cli
+```sh
 ##Not needed------------------------------------------------------
 $ npm install selenium-standalone@latest -g
 $ selenium-standalone install
@@ -17,6 +17,18 @@ webdriver-manager shutdown
 
 ####BDD
 https://github.com/webdriverio/cucumber-boilerplate snippets
+run wdio -- --spec ./test/features/select.feature
+
+```Gherkin
+@Tag
+Feature: ...
+
+```
+run wdio -- --tags=@Tag,@AnotherTag
+
+
+http://cucumber-mink.js.org/steps/
+
 ------------------------------------------------------------------------------
 At start of App.js, inject this
 ```js
