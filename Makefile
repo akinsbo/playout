@@ -9,7 +9,10 @@ help:
 	@echo "one-time-setup-for_this_project: setup dev dependecies and dependecies"
 	@echo "fix-run: eslint fix"
 	@echo "eslint-reset: reset eslint configuration"
-
+	@echo "run in this order make one-time-installs  /n\
+	make one-time-setup-for_all_projects /n \
+	make one-time-setup-for_this_project"
+	
 one-time-installs:
 	@echo "Installing selenium server wrapped in webdriverio globally \
 	for cucumber-mink"
