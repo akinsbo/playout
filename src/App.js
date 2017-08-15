@@ -1,5 +1,6 @@
-import AppBar from 'material-ui/AppBar'
 import injectTapEventPlugin from 'react-tap-event-plugin'
+
+import AppBar from 'material-ui/AppBar'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import React, { Component } from 'react' // eslint-disable-line no-unused-vars
 import logo from './logo.svg'
