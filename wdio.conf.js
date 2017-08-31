@@ -126,9 +126,9 @@ exports.config = {
     // definitions.
     cucumberOpts: {
         require: [
-            './src/steps/given.js',
-            './src/steps/then.js',
-            './src/steps/when.js',
+            './features/steps/given.js',
+            './features/steps/then.js',
+            './features/steps/when.js',
         ], // <string[]> (file/dir) require files before executing features
         backtrace: false, // <boolean> show full backtrace for errors
         compiler: [
@@ -147,7 +147,7 @@ exports.config = {
         profile: [], // <string[]> (name) specify the profile to use
         strict: true, // <boolean> fail if there are any undefined or pending
                        // steps
-        tags: require('./src/tagProcessor')(process.argv),
+        tags: require('./features/tagProcessor')(process.argv),
         // <string[]> (expression) only execute the features or scenarios with
         // tags matching the expression
         timeout: 20000,     // <number> timeout for step definitions

@@ -1,18 +1,29 @@
 VARIABLE="my-file"
 
 help:
-	@echo "help: Generates this"
-	@echo "one-time-installs: Do this first. Generates webdriver-manager \
+	@echo ""
+	@echo ""
+	@echo "help: \t Generates this"
+	@echo ""
+	@echo "*install and setup commands*"
+	@echo "one-time-installs: \t Do this first. Generates webdriver-manager \
 	and watchman brew install for FS_EVENT error \
 	when npm test is run on Mac systems"
-	@echo "one-time-setup-for_all_projects: start selenium server for this project"
-	@echo "one-time-setup-for_this_project: setup dev dependecies and dependecies"
-	@echo "fix-run: eslint fix"
-	@echo "eslint-reset: reset eslint configuration"
-	@echo "run in this order make one-time-installs  /n\
-	make one-time-setup-for_all_projects /n \
+	@echo "one-time-setup-for_all_projects: \t start selenium server for this project"
+	@echo "one-time-setup-for_this_project: \tsetup dev dependecies and dependecies"
+	@echo ""
+	@echo "*eslints commands*"
+	@echo "fix-run: \t eslint fixes syntax"
+	@echo "eslint-reset: \t reset your eslint configuration"
+	@echo ""
+	@echo "*project commands*"
+	@echo "start: \t Starts the project"
+	@echo ""
+	@echo "*run in this order*: \n\tmake one-time-installs \n\t\
+	make one-time-setup-for_all_projects \n\t\
 	make one-time-setup-for_this_project"
-	
+	@echo ""
+
 one-time-installs:
 	@echo "Installing selenium server wrapped in webdriverio globally \
 	for cucumber-mink"
@@ -83,3 +94,9 @@ eslint-reset:
 
 run-selenium:
 	java –jar selenium-server-standalone-2.48.2.jar
+
+run-wdio-integration-test:
+	./node_modules/.bin/wdio wdio.conf.js
+
+start:
+	npm start
