@@ -65,3 +65,30 @@ export.config = {
   // ...
 };
 ```
+-----------------------------------------------------------------
+At package.json, add the following:
+
+```js
+"scripts": {
+  ...,
+"local-webserver": "http-server ./public -s -p:8003",
+...
+}
+```
+local-webserver: http-server [path] [options]
+* ./public: the path to the index.html
+* -s: Silent mode. Do not log output.
+* -p: port to use
+
+Also add the below:
+
+```js
+"scripts": {
+  ...,
+"test:features": "npm run local-webserver & (wdio wdio.BUILD.conf.js; wdio_ret=$?; kill $(lsof -t -i:8003); exit $wdio_ret)",
+...
+
+"test:unit": "jest --config=jest.json",
+"test:validate": "eslint 'src/**/*.js' 'test/**/*.js!(setup.js)'"
+}
+```

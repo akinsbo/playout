@@ -23,6 +23,8 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.1.0",
     "eslint-plugin-standard": "^3.0.1",
+    "http-server": "^0.10.0",
+    "jest": "^20.0.4",
     "mocha": "^3.5.0",
     "node-sass": "^4.5.3",
     "react-scripts": "1.0.10",
@@ -37,7 +39,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "local-webserver": "http-server ./public -s",
+    "test:features": "npm run local-webserver & (wdio wdio.BUILD.conf.js; wdio_ret=$?; kill $(lsof -t -i:8003); exit $wdio_ret)",
+    "test:unit": "jest --config=jest.json",
+    "test:validate": "eslint 'src/**/*.js' 'test/**/*.js!(setup.js)'"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",

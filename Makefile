@@ -28,8 +28,10 @@ one-time-installs:
 	@echo "Installing selenium server wrapped in webdriverio globally \
 	for cucumber-mink"
 	npm install -g webdriver-manager
-	@echo "Install watchman to carter for FS_EVENT error when npm test is run"
+	@echo "Install watchman to carter for FS_EVENT error on mac when npm test is run"
 	brew install watchman
+	@echo "globally install http server to allow it run from command line"
+	npm install -g http-server
 
 one-time-setup-for_all_projects:
 	@echo "Setup cucumber-mink"
@@ -50,16 +52,20 @@ one-time-setup-for_all_projects:
 
 one-time-setup-for_this_project:
 	@echo "npm install does this but this shows a stepwise line-grouped install"
-	@echo "Setup one-time for this project"
+	@echo "Running one-time setup for this project"
+	@echo ""
 	@echo "==================="
 	@echo "Setup dev dependencies"
 	@echo "==================="
 	npm install --save-dev \
 	eslint eslint@>=4.1.1 eslint-plugin-react \
-	mocha \
+	mocha jest \
 	sass-loader node-sass \
 	cucumber cucumber-mink webdriverio wdio-cucumber-framework \
 	wdio-spec-reporter wdio-phantomjs-service wdio-selenium-standalone-service \
+	http-server
+	@echo ""
+	@echo "==================="
 	@echo "Setup dependencies"
 	@echo "==================="
 	npm install --save \
@@ -72,10 +78,10 @@ one-time-setup-for_this_project:
 	./node_modules/.bin/eslint --init
 	@echo "Run fix-run for eslint fix"
 	@echo "For a single file, use ./node_modules/.bin/eslint yourfile.js --fix"
+	@echo ""
 	@echo "setup webdriverio"
 	@echo "chose cucumber when asked for framework to allow BDD"
 	./node_modules/.bin/wdio config
-
 
 test-run:
 	@echo "Running cucumber-mink"
@@ -97,6 +103,9 @@ run-selenium:
 
 run-wdio-integration-test:
 	./node_modules/.bin/wdio wdio.conf.js
+
+test-run-localwebserver:
+	npm run local-webserver
 
 start:
 	npm start
