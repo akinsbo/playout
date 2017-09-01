@@ -59,6 +59,8 @@ one-time-setup-for_this_project:
 	@echo "==================="
 	npm install --save-dev \
 	eslint eslint@>=4.1.1 eslint-plugin-react \
+	babel-preset-es2015 babel-preset-react\
+	babel babel-cli \
 	mocha jest \
 	sass-loader node-sass \
 	cucumber cucumber-mink webdriverio wdio-cucumber-framework \
